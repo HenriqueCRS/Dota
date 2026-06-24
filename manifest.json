@@ -1,0 +1,58 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "Dota Coach Overlay",
+    "version": "0.1.0",
+    "minimum-overwolf-version": "0.198.0",
+    "author": "Henrique",
+    "icon": "icons/icon256.png",
+    "icon_gray": "icons/icon256_gray.png",
+    "launcher_icon": "icons/icon.ico",
+    "description": "Overlay com indicadores de net worth, last hits, KDA, timings e dicas em portugues para Dota 2."
+  },
+  "permissions": [
+    "GameInfo",
+    "Hotkeys"
+  ],
+  "data": {
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "background/background.html",
+        "is_background_page": true
+      },
+      "in_game": {
+        "file": "windows/in_game/in_game.html",
+        "transparent": true,
+        "clickthrough": true,
+        "in_game_only": true,
+        "focus_game_takeover": "ReleaseOnHidden",
+        "focus_game_takeover_release_hotkey": "toggle_clickthrough",
+        "size": { "width": 1920, "height": 1080 },
+        "start_position": { "top": 0, "left": 0 },
+        "topmost": false,
+        "resizable": false
+      }
+    },
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [7314]
+    },
+    "game_events": [7314],
+    "hotkeys": {
+      "toggle_overlay": {
+        "title": "Mostrar/ocultar overlay",
+        "action-type": "toggle",
+        "default": "Ctrl+Shift+D",
+        "passthrough": true
+      },
+      "toggle_clickthrough": {
+        "title": "Travar/destravar clique no overlay",
+        "action-type": "custom",
+        "default": "Ctrl+Shift+F",
+        "passthrough": true
+      }
+    }
+  }
+}

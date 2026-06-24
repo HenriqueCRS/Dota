@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dota Coach Overlay</title>
+  <link rel="stylesheet" href="in_game.css">
+</head>
+<body>
+  <!-- Painel principal (translucido, no canto superior esquerdo) -->
+  <div id="hud" class="hud">
+    <div class="hud-head">
+      <span class="hero" id="hero">--</span>
+      <span class="clock" id="clock">0:00</span>
+      <button class="mute" id="mute" title="Ativar/silenciar voz">&#128266;</button>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <span class="m-label">Net worth (GPM)</span>
+        <span class="m-value" id="nw-value">0</span>
+        <span class="badge" id="nw-badge">--</span>
+      </div>
+      <div class="metric">
+        <span class="m-label">Last hits</span>
+        <span class="m-value" id="lh-value">0 <small>/min 0</small></span>
+        <span class="badge" id="lh-badge">--</span>
+      </div>
+      <div class="metric small">
+        <span class="m-label">KDA</span>
+        <span class="m-value" id="kda-value">0 / 0 / 0</span>
+      </div>
+      <div class="metric small">
+        <span class="m-label">Nivel</span>
+        <span class="m-value" id="lvl-value">1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Faixa de dicas (toasts) -->
+  <div id="tips" class="tips"></div>
+
+  <script src="../../js/constants.js"></script>
+  <script src="../../js/benchmarks.js"></script>
+  <script src="../../js/coach.js"></script>
+  <script src="../../js/audio.js"></script>
+  <script src="in_game.js"></script>
+</body>
+</html>

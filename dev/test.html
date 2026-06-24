@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dota Coach - Harness de teste</title>
+  <link rel="stylesheet" href="../windows/in_game/in_game.css">
+  <style>
+    /* Fundo simulando a tela do jogo (o overlay real e transparente). */
+    html, body { background: radial-gradient(circle at 30% 20%, #1f2937, #0b0f17 70%); }
+    .dev-note {
+      position: absolute; bottom: 12px; left: 14px; right: 14px;
+      font-family: 'Segoe UI', sans-serif; font-size: 12px; color: #64748b;
+      background: rgba(15,18,24,0.7); border-radius: 8px; padding: 8px 12px;
+    }
+    .dev-note b { color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <!-- Mesma marcacao do HUD real (windows/in_game/in_game.html) -->
+  <div id="hud" class="hud">
+    <div class="hud-head">
+      <span class="hero" id="hero">--</span>
+      <span class="clock" id="clock">0:00</span>
+      <button class="mute" id="mute" title="Ativar/silenciar voz">&#128266;</button>
+    </div>
+    <div class="metrics">
+      <div class="metric">
+        <span class="m-label">Net worth (GPM)</span>
+        <span class="m-value" id="nw-value">0</span>
+        <span class="badge" id="nw-badge">--</span>
+      </div>
+      <div class="metric">
+        <span class="m-label">Last hits</span>
+        <span class="m-value" id="lh-value">0 <small>/min 0</small></span>
+        <span class="badge" id="lh-badge">--</span>
+      </div>
+      <div class="metric small">
+        <span class="m-label">KDA</span>
+        <span class="m-value" id="kda-value">0 / 0 / 0</span>
+      </div>
+      <div class="metric small">
+        <span class="m-label">Nivel</span>
+        <span class="m-value" id="lvl-value">1</span>
+      </div>
+    </div>
+  </div>
+  <div id="tips" class="tips"></div>
+
+  <div class="dev-note">
+    <b>Harness de teste</b> &mdash; partida simulada (sem Dota/Overwolf). Clique uma
+    vez na pagina para liberar o audio do navegador. Console: <b>sim.fast(60)</b> acelera,
+    <b>sim.reset()</b> reinicia. Edite <b>dev/simulator.js</b> (HERO, gpmRate, lhRate)
+    para ver os badges mudarem de cor.
+  </div>
+
+  <!-- mock ANTES de in_game.js, que depende de overwolf.* -->
+  <script src="mock-overwolf.js"></script>
+  <script src="../js/constants.js"></script>
+  <script src="../js/benchmarks.js"></script>
+  <script src="../js/coach.js"></script>
+  <script src="../js/audio.js"></script>
+  <script src="../windows/in_game/in_game.js"></script>
+  <script src="simulator.js"></script>
+</body>
+</html>

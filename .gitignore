@@ -1,0 +1,4 @@
+node_modules/
+*.opk
+.DS_Store
+Thumbs.db
