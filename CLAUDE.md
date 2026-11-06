@@ -60,7 +60,12 @@ Detalhes e recomendações em [docs/diagnostico-e-plano.md](docs/diagnostico-e-p
   - Runa de recompensa a cada 3 min no código; são 4 min desde o 7.38.
   - O HUD persistente contraria a regra de compliance do Overwolf.
 - Conta de desenvolvedor do Overwolf: **sem whitelist** ainda. Nada roda no Overwolf até a proposta ser aprovada.
-- Plano em etapas aguardando aprovação (seção 5 do diagnóstico). Etapa atual: 0 (diagnóstico entregue).
+  Formulário: https://dev.overwolf.com/app-idea-form/ (login com conta Overwolf). Rascunho em inglês em
+  [docs/proposta-overwolf.md](docs/proposta-overwolf.md), aguardando o nome do app. A página atual não informa o
+  prazo de resposta.
+- Depois da whitelist: cliente de desenvolvedor em
+  https://download.overwolf.com/install/Download?Channel=developers, carregar a pasta do projeto e testar contra bots.
+- Plano aprovado em 06/11/2026. Etapa atual: 0 (proposta ao Overwolf). A Etapa 1 pode começar em paralelo.
 
 ## Fatos verificados que afetam o código
 
